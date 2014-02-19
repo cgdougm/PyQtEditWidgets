@@ -1,0 +1,609 @@
+DEBUG    - xmlUtils_v003:loadXmlRootFromFile:65 - parsing xml : /imd/dept/surfacing/testData/mtlBuildLibrary_v004/KTCHPSTA_variations.mbws
+DEBUG    - xmlUtils_v004:loadXmlRootFromFile:36 - parsing xml : /imd/dept/surfacing/testData/mtlBuildLibrary_v004/KTCHPSTA_variations.mbws
+DEBUG    - xmlUtils_v004:validateXml:19 - 
+<!ELEMENT ATParameterGroup (ATParameter*)>
+<!ATTLIST ATParameterGroup Name CDATA #REQUIRED>
+
+<!ELEMENT ATRibAttr EMPTY>
+<!ATTLIST ATRibAttr Value CDATA #REQUIRED>
+<!ATTLIST ATRibAttr Name CDATA #REQUIRED>
+
+<!ELEMENT MtlBuildWorkspace (ArchetypeSet,MtlBuildTarget*)>
+<!ATTLIST MtlBuildWorkspace version CDATA #REQUIRED>
+
+<!ELEMENT MtlBuildTarget (Header,FSGroupNode)>
+<!ATTLIST MtlBuildTarget version CDATA #REQUIRED>
+<!ATTLIST MtlBuildTarget Name CDATA #REQUIRED>
+
+<!ELEMENT FSGroupNode (FSGroupNode*,FSNode*)>
+<!ATTLIST FSGroupNode Mtl CDATA #IMPLIED>
+<!ATTLIST FSGroupNode Name CDATA #REQUIRED>
+
+<!ELEMENT ArchetypeSet (ATRef*,ATMtl*)>
+<!ATTLIST ArchetypeSet version CDATA #REQUIRED>
+
+<!ELEMENT ATMtl (ATShader*,ATRibAttr*,ATMtl*)>
+<!ATTLIST ATMtl SourceName CDATA #IMPLIED>
+<!ATTLIST ATMtl Name CDATA #REQUIRED>
+
+<!ELEMENT ATShader (ATParameterGroup*)>
+<!ATTLIST ATShader Slo CDATA #IMPLIED>
+<!ATTLIST ATShader Type CDATA #REQUIRED>
+
+<!ELEMENT Header EMPTY>
+<!ATTLIST Header IngestionDataFilename CDATA #REQUIRED>
+<!ATTLIST Header AssetCode CDATA #IMPLIED>
+<!ATTLIST Header TextureAssetCode CDATA #REQUIRED>
+<!ATTLIST Header IgnoreMapTypes CDATA #IMPLIED>
+<!ATTLIST Header OutputMtlFilename CDATA #IMPLIED>
+
+<!ELEMENT ATRef EMPTY>
+<!ATTLIST ATRef Version CDATA #IMPLIED>
+<!ATTLIST ATRef Source CDATA #REQUIRED>
+
+<!ELEMENT FSNode EMPTY>
+<!ATTLIST FSNode Mtl CDATA #IMPLIED>
+<!ATTLIST FSNode Name CDATA #REQUIRED>
+
+<!ELEMENT ATParameter EMPTY>
+<!ATTLIST ATParameter Type CDATA #IMPLIED>
+<!ATTLIST ATParameter Value CDATA #IMPLIED>
+<!ATTLIST ATParameter Hint CDATA #IMPLIED>
+<!ATTLIST ATParameter UIHint CDATA #IMPLIED>
+<!ATTLIST ATParameter Name CDATA #REQUIRED>
+
+INFO     - mtlBuild:dump:57 - MtlBuildWorkspace : /imd/dept/surfacing/testData/mtlBuildLibrary_v004/KTCHPSTA_variations.mbws
+INFO     - archetypeMtl:dump:1030 -     ATMaterialSet
+INFO     - archetypeMtl:dump:1031 -       Filename : 
+INFO     - archetypeMtl:dump:1032 -       Num Refs : 1
+INFO     - archetypeMtl:dump:956 -         ATReference : /imd/dept/surfacing/archetype/LIBRARY_TEMP.arch
+INFO     - archetypeMtl:dump:1035 -       Num Mtls : 3
+INFO     - archetypeMtl:dump:714 -         ATMaterial : KTCHPSTA_picture
+INFO     - archetypeMtl:dump:715 -           Source : genericBaseTex 
+INFO     - archetypeMtl:dump:716 -           Num Rib Attributes : 0
+INFO     - archetypeMtl:dump:717 -           Num Shaders : 2
+INFO     - archetypeMtl:dump:718 -           Num Mtls : 0
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 3
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 6
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               1.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.0500000007451       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMaxValue      0.20000000298         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.300000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.20000000298         hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 3
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 6
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               1.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.0500000007451       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMaxValue      0.20000000298         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.300000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.20000000298         hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:714 -         ATMaterial : KTCHPSTA_glass
+INFO     - archetypeMtl:dump:715 -           Source : genericBaseTex 
+INFO     - archetypeMtl:dump:716 -           Num Rib Attributes : 0
+INFO     - archetypeMtl:dump:717 -           Num Shaders : 2
+INFO     - archetypeMtl:dump:718 -           Num Mtls : 0
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 6
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Opacity_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      DiffGain             0.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 8
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               1.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.800000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.019999999553        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurTex           gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.00499999988824      hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.019999999553        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessTex         gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : AmbOcc_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               0.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Opacity_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      DiffGain             0.2                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 6
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Opacity_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      DiffGain             0.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 8
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               1.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.800000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.019999999553        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurTex           gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.00499999988824      hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.019999999553        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessTex         gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : AmbOcc_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      Switch               0.0                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Opacity_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      DiffGain             0.2                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:714 -         ATMaterial : KTCHPSTA_frame
+INFO     - archetypeMtl:dump:715 -           Source : genericBaseTex 
+INFO     - archetypeMtl:dump:716 -           Num Rib Attributes : 0
+INFO     - archetypeMtl:dump:717 -           Num Shaders : 2
+INFO     - archetypeMtl:dump:718 -           Num Mtls : 0
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 3
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 12
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.300000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EdgeGain             1.10000002384         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EdgeRoughness        0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMaxValue      0.0799999982119       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.15000000596         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurTex           gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvEdgeGain          1.10000002384         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvEdgeRoughness     0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.0799999982119       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.15000000596         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessTex         gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Surface
+INFO     - archetypeMtl:dump:380 -               slo : generic_surface
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 3
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Diff_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      ColorTex             col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : IndIllum
+INFO     - archetypeMtl:dump:308 -                   Num Params : 1
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              col                   hint : None  uihint : None
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Spec_0
+INFO     - archetypeMtl:dump:308 -                   Num Params : 12
+INFO     - archetypeMtl:dump:215 -                     ???      ColorGain            0.300000011921        hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EdgeGain             1.10000002384         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EdgeRoughness        0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMaxValue      0.0799999982119       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurMinValue      0.15000000596         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvBlurTex           gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvEdgeGain          1.10000002384         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      EnvEdgeRoughness     0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      GainTex              gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMaxValue    0.0799999982119       hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessMinValue    0.15000000596         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      RoughnessTex         gspc                  hint : None  uihint : None
+INFO     - archetypeMtl:dump:379 -             ATShader : Displacement
+INFO     - archetypeMtl:dump:380 -               slo : 
+INFO     - archetypeMtl:dump:381 -               Num ParamGrps : 1
+INFO     - archetypeMtl:dump:307 -                 ATParameterGroup : Disp_1
+INFO     - archetypeMtl:dump:308 -                   Num Params : 3
+INFO     - archetypeMtl:dump:215 -                     ???      MaxGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      MinGain              0.10000000149         hint : None  uihint : None
+INFO     - archetypeMtl:dump:215 -                     ???      Tex                  dsp1                  hint : None  uihint : None
+INFO     - mtlBuildTarget:dump:352 -     MtlBuildTarget : KTCHPSTA
+INFO     - mtlBuildTarget:dump:43 -       Header
+INFO     - mtlBuildTarget:dump:44 -         AssetCode             : None
+INFO     - mtlBuildTarget:dump:45 -         TextureAssetCode      : KTCHPSTA:variation2
+INFO     - mtlBuildTarget:dump:46 -         IngestionDataFilename : /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/model/hi_MODELgto_KTCHPSTA_003.gto
+INFO     - mtlBuildTarget:dump:47 -         IgnoreMapTypes        : None
+INFO     - mtlBuildTarget:dump:48 -         OutputMtlFilename     : /imd/show/mnm/sandbox/asset/set_decoration/KTCHPSTA/surfacing/dmacmillan/materials/KTCHPSTA_vartest_v001.mtl
+INFO     - mtlBuildTarget:dump:213 -       FSGroupNode : __global__  : None : (None)
+INFO     - mtlBuildTarget:dump:213 -         FSGroupNode : KTCHPSTA_picture  : KTCHPSTA_picture : (KTCHPSTA_picture : KTCHPSTA_picture)
+INFO     - mtlBuildTarget:dump:93 -           FSNode      : picture_0001__picture  : None : (KTCHPSTA_picture : KTCHPSTA_picture)
+INFO     - mtlBuildTarget:dump:213 -         FSGroupNode : KTCHPSTA_glass  : KTCHPSTA_glass : (KTCHPSTA_glass : KTCHPSTA_glass)
+INFO     - mtlBuildTarget:dump:93 -           FSNode      : glass_0002__glass  : None : (KTCHPSTA_glass : KTCHPSTA_glass)
+INFO     - mtlBuildTarget:dump:213 -         FSGroupNode : KTCHPSTA_frame  : KTCHPSTA_frame : (KTCHPSTA_frame : KTCHPSTA_frame)
+INFO     - mtlBuildTarget:dump:93 -           FSNode      : frame_0000__frame  : None : (KTCHPSTA_frame : KTCHPSTA_frame)
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'MtlBuildWorkspace'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'MtlBuildTarget'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE picture_0001__picture
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'picture', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:gatherTextures:363 - Dot NOT in code; given assetCode: 'KTCHPSTA:variation2'
+DEBUG    - mtlCompiler:gatherTextures:386 - textures from loco: assetCode:'KTCHPSTA' show:'mnm'
+DEBUG    - mtlCompiler:setShowAsset:205 - validating show='mnm', asset='KTCHPSTA'
+DEBUG    - mtlCompiler:validateAsset:183 - in validateAsset
+DEBUG    - mtlCompiler:validateAsset:188 - KTCHPSTA
+DEBUG    - mtlCompiler:validateAsset:195 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:setShowAsset:208 - setting
+DEBUG    - mtlCompiler:gatherTextures:393 - setVariant variation2
+DEBUG    - mtlCompiler:validateAsset:183 - in validateAsset
+DEBUG    - mtlCompiler:validateAsset:188 - KTCHPSTA
+DEBUG    - mtlCompiler:validateAsset:195 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:refresh:246 - KTCHPSTA
+DEBUG    - mtlCompiler:refresh:247 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:getTextureSetDict:127 - LocoStorm.findByCode('KTCHPSTA','mnm')
+DEBUG    - mtlCompiler:refresh:254 - # First pass: just subject or variation
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_006.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation5'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation5_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation5'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation4'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation4_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation4'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'col') (1 paths)
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation3'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation3_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation3'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation6'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation6_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation6'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation5'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation5_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation5'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'dsp1') (1 paths)
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation4'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation4_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation4'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_008.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation6'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation6_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation6'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation3'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation3_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation3'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'col') (2 paths)
+DEBUG    - mtlCompiler:refresh:278 - PASS #2: find empty keys, use no variations; subject must match
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'col')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'col') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'col')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'col') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'picture', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'picture', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'dsp1')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'dsp1') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'dsp1')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'dsp1') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'gspc')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'gspc')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex' (all versions: 004)
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex' (all versions: 004, 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex' (all versions: 006)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:gatherTextures:403 - gathered textures for KTCHPSTA:variation2
+DEBUG    - mtlCompiler:gatherTextures:405 - glass
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:gatherTextures:405 - frame
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex
+DEBUG    - mtlCompiler:gatherTextures:405 - picture
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE glass_0002__glass
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {'picture': set([u'gspc', u'dsp1', u'col'])})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'glass', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE frame_0000__frame
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {'picture': set([u'gspc', u'dsp1', u'col']), 'glass': set([u'gspc', u'dsp1', u'col'])})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'frame', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'MtlBuildTarget'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE picture_0001__picture
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'picture', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:gatherTextures:363 - Dot NOT in code; given assetCode: 'KTCHPSTA:variation2'
+DEBUG    - mtlCompiler:gatherTextures:386 - textures from loco: assetCode:'KTCHPSTA' show:'mnm'
+DEBUG    - mtlCompiler:setShowAsset:205 - validating show='mnm', asset='KTCHPSTA'
+DEBUG    - mtlCompiler:validateAsset:183 - in validateAsset
+DEBUG    - mtlCompiler:validateAsset:188 - KTCHPSTA
+DEBUG    - mtlCompiler:validateAsset:195 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:setShowAsset:208 - setting
+DEBUG    - mtlCompiler:gatherTextures:393 - setVariant variation2
+DEBUG    - mtlCompiler:validateAsset:183 - in validateAsset
+DEBUG    - mtlCompiler:validateAsset:188 - KTCHPSTA
+DEBUG    - mtlCompiler:validateAsset:195 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:refresh:246 - KTCHPSTA
+DEBUG    - mtlCompiler:refresh:247 - {'imdid': 836816, 'shows_id': None, 'code': u'KTCHPSTA', 'name': u'KitchenPosterA', 'branch_parent_id': None, 'deleted': False, 'shotgun_id': 2850, 'thumb_path': u'/thumb/122951/ASSETS/KTCHPSTA_THUMB.png.jpg', 'branch_name': None, 'prod_type': u'Set Decoration', 'description': u'MiloKitchenSetDecoration'}
+DEBUG    - mtlCompiler:getTextureSetDict:127 - LocoStorm.findByCode('KTCHPSTA','mnm')
+DEBUG    - mtlCompiler:refresh:254 - # First pass: just subject or variation
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_006.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation5'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation5_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation5'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation4'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation4_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation4'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'col') (1 paths)
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation3'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation3_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation3'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation6'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation6_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation6'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation5'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation5_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation5'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'dsp1') (1 paths)
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation4'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation4_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation4'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_008.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation6'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation6_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation6'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation3'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation3_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping 'variation3'
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: ''    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_004.tex'
+DEBUG    - mtlCompiler:refresh:266 - ...not the right variant, skipping ''
+DEBUG    - mtlCompiler:refresh:258 - subj: ''    var: 'variation2'    texPath: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_002.tex'
+DEBUG    - mtlCompiler:refresh:276 - PASS #1: key (u'picture', u'col') (2 paths)
+DEBUG    - mtlCompiler:refresh:278 - PASS #2: find empty keys, use no variations; subject must match
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'col')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'col') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'col')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'col') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'picture', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'picture', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'dsp1')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'dsp1') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'dsp1')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'dsp1') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'frame', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'frame', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:288 - ...key '(u'glass', u'gspc')' not yet filled
+DEBUG    - mtlCompiler:refresh:294 - ...no subject
+DEBUG    - mtlCompiler:refresh:305 - ...empty key (u'glass', u'gspc') satisfied using path: /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'gspc')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'frame', u'col')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'gspc')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'glass', u'dsp1')
+DEBUG    - mtlCompiler:refresh:285 - ...already have a variant/subject for key (u'picture', u'col')
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex' (all versions: 004)
+DEBUG    - mtlCompiler:refresh:319 - key ('glass','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','dsp1') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex' (all versions: 004, 002)
+DEBUG    - mtlCompiler:refresh:319 - key ('frame','col') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex' (all versions: 006)
+DEBUG    - mtlCompiler:refresh:319 - key ('picture','gspc') path: '/imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex' (all versions: 002)
+DEBUG    - mtlCompiler:gatherTextures:403 - gathered textures for KTCHPSTA:variation2
+DEBUG    - mtlCompiler:gatherTextures:405 - glass
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_glass_col_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:gatherTextures:405 - frame
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_dsp1_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_frame_col_KTCHPSTA_006.tex
+DEBUG    - mtlCompiler:gatherTextures:405 - picture
+DEBUG    - mtlCompiler:gatherTextures:407 - gspc  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_gspc_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - dsp1  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_dsp1_variation2_KTCHPSTA_002.tex
+DEBUG    - mtlCompiler:gatherTextures:407 - col  /imd/show/mnm/library/asset/set_decoration/ktchpsta/files/surfacing/TextureRender_picture_col_variation2_KTCHPSTA_004.tex
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE glass_0002__glass
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {'picture': set([u'gspc', u'dsp1', u'col'])})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'glass', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSGroupNode'
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE frame_0000__frame
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {'picture': set([u'gspc', u'dsp1', u'col']), 'glass': set([u'gspc', u'dsp1', u'col'])})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'frame', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
+DEBUG    - mtlCompiler:digForTextures:72 - DIG: node class: 'FSNode'
+DEBUG    - mtlCompiler:digForTextures:75 -     FSNODE glass_0002__glass
+DEBUG    - mtlCompiler:digForTextures:76 -     mapTypes defaultdict(<type 'set'>, {})
+DEBUG    - mtlCompiler:digForTextures:83 -     texTag: 'glass', target: 'KTCHPSTA'
+DEBUG    - mtlCompiler:digForTextures:85 -     len(textures.keys,values) 3; 3
