@@ -29,7 +29,8 @@ Date:    9 Mar 2007
 
 from __future__ import generators
 
-import sys, warnings, os, fnmatch, glob, shutil, codecs, md5
+import sys, warnings, os, fnmatch, glob, shutil, codecs
+from hashlib import md5
 
 __version__ = '2.2'
 __all__ = ['path']
@@ -968,3 +969,6 @@ class path(_base):
         def startfile(self):
             os.startfile(self)
 
+if __name__ == "__main__":
+    foo = path("file")
+    print foo.abspath()
